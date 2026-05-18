@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Política de Privacidad — SegurosIA</title>
+<meta name="description" content="Política de privacidad de SegurosIA (Coberio, S.L.). Cómo tratamos tus datos personales y cómo ejercer tus derechos." />
+<meta name="robots" content="noindex, follow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #FAFAF7; --bg-2: #F4F2EC; --surface: #FFFFFF;
+    --ink: #0E1014; --ink-2: #2A2F38; --muted: #5E6470; --muted-2: #9098A2;
+    --line: #E5E2DA; --line-2: #EFEDE6;
+    --accent: #1E3A5F; --accent-ink: #14283F; --accent-soft: #EAF0F7; --accent-line: #D2DEEC;
+    --radius-sm: 8px; --radius: 14px; --radius-lg: 22px;
+    --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --container: 1240px; --pad-x: clamp(20px, 4vw, 56px);
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html,body { margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--font-sans); font-size: 17px; line-height: 1.55; color: var(--ink-2); background: var(--bg); -webkit-font-smoothing: antialiased; }
+  @media (min-width: 800px) { body { font-size: 18px; } }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+  ::selection { background: var(--accent); color: #fff; }
+
+  .display { font-family: var(--font-sans); color: var(--ink); font-weight: 600; letter-spacing: -0.025em; line-height: 1.05; }
+  .h1 { font-size: clamp(32px, 4.5vw, 54px); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); }
+  .eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--accent); }
+  .wrap { max-width: var(--container); margin: 0 auto; padding-left: var(--pad-x); padding-right: var(--pad-x); }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--bg) 86%, transparent); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+  .nav.scrolled { border-color: var(--line); }
+  .nav-inner { max-width: var(--container); margin: 0 auto; padding: 10px var(--pad-x); display: flex; align-items: center; gap: 28px; }
+  .brand { display: inline-flex; align-items: center; color: var(--ink); }
+  .brand-logo { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .brand-logo { height: 48px; } }
+  .nav-links { display: none; gap: 26px; margin-left: auto; }
+  @media (min-width: 980px) { .nav-links { display: flex; } }
+  .nav-links a { font-size: 15px; color: var(--ink-2); padding: 6px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .nav-links a:hover { color: var(--ink); border-color: var(--accent); }
+  .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  @media (min-width: 980px) { .nav-cta { margin-left: 0; } }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 10px; font-size: 15px; font-weight: 500; border: 1px solid transparent; transition: background .15s, color .15s, border-color .15s; white-space: nowrap; }
+  .btn-primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+  .btn-sm { padding: 9px 14px; font-size: 14px; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  @media (min-width: 980px) { .nav-toggle { display: none; } }
+  .mobile-menu { display: none; border-top: 1px solid var(--line); background: var(--bg); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 12px var(--pad-x) 20px; display: grid; gap: 4px; }
+  .mobile-menu a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line-2); font-size: 17px; color: var(--ink); }
+
+  /* HERO */
+  .legal-hero { padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 56px); border-bottom: 1px solid var(--line); }
+  .legal-hero .eyebrow { margin-bottom: 20px; }
+  .legal-hero h1 { margin: 0 0 14px; }
+  .legal-hero .meta { color: var(--muted); font-size: 14.5px; margin: 0; }
+
+  /* LAYOUT */
+  .legal-body { padding: clamp(48px, 6vw, 80px) 0 clamp(72px, 10vw, 120px); }
+  .legal-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+  @media (min-width: 1040px) { .legal-grid { grid-template-columns: 220px 1fr; gap: 80px; align-items: start; } }
+
+  /* SIDEBAR */
+  .legal-toc { position: sticky; top: 88px; }
+  .legal-toc h4 { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-2); font-weight: 500; margin: 0 0 12px; }
+  .legal-toc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+  .legal-toc a { display: block; font-size: 13.5px; color: var(--muted); padding: 7px 10px; border-left: 2px solid var(--line); transition: color .15s, border-color .15s; line-height: 1.4; }
+  .legal-toc a:hover { color: var(--ink); border-color: var(--accent); }
+
+  /* PROSE */
+  .prose { max-width: 74ch; }
+  .prose h2 { font-size: clamp(19px, 2vw, 22px); font-weight: 600; color: var(--ink); letter-spacing: -0.015em; margin: 0 0 12px; padding-top: 48px; border-top: 1px solid var(--line); }
+  .prose h2:first-child { padding-top: 0; border-top: none; margin-top: 0; }
+  .prose p { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; line-height: 1.75; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose ul, .prose ol { margin: 0 0 14px; padding-left: 22px; color: var(--muted); font-size: 15.5px; line-height: 1.75; }
+  .prose li { margin-bottom: 6px; }
+  .prose a { color: var(--accent-ink); border-bottom: 1px solid var(--accent-line); transition: color .15s; }
+  .prose a:hover { color: var(--ink); }
+  .prose strong { color: var(--ink-2); font-weight: 600; }
+
+  /* IDENTITY CARD */
+  .identity-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin: 18px 0 24px; display: grid; gap: 10px; }
+  .identity-row { display: flex; gap: 12px; font-size: 15px; }
+  .identity-label { font-weight: 600; color: var(--ink-2); min-width: 160px; flex-shrink: 0; }
+  .identity-value { color: var(--muted); }
+
+  /* DATA TABLE */
+  .data-table-wrap { overflow-x: auto; margin: 18px 0 24px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  .data-table thead tr { background: var(--bg-2); }
+  .data-table th { text-align: left; padding: 11px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .data-table td { padding: 12px 16px; color: var(--muted); border-bottom: 1px solid var(--line-2); vertical-align: top; line-height: 1.55; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td strong { color: var(--ink-2); }
+  .data-table .tag { display: inline-block; font-size: 11.5px; font-weight: 500; padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); border: 1px solid var(--accent-line); white-space: nowrap; }
+
+  /* RIGHTS BOX */
+  .rights-box { background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 20px 22px; margin: 18px 0; }
+  .rights-box p { color: var(--accent-ink) !important; margin: 0 !important; font-size: 15px !important; }
+  .rights-box a { color: var(--accent-ink); border-bottom-color: var(--accent-line); }
+
+  /* RIGHTS LIST */
+  .rights-list { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 8px; }
+  .rights-list li { display: flex; gap: 12px; font-size: 15.5px; color: var(--muted); line-height: 1.55; }
+  .rights-list li::before { content: ""; display: block; width: 18px; height: 18px; min-width: 18px; margin-top: 2px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent-line); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2314283F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
+
+  /* SECURITY LIST */
+  .security-grid { display: grid; gap: 10px; grid-template-columns: 1fr; margin: 14px 0; }
+  @media (min-width: 640px) { .security-grid { grid-template-columns: repeat(2, 1fr); } }
+  .security-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 14.5px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+  .security-item svg { width: 16px; height: 16px; min-width: 16px; margin-top: 1px; stroke: var(--accent-ink); fill: none; stroke-width: 1.8; }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: #B7BCC4; }
+  .footer-inner { max-width: var(--container); margin: 0 auto; padding: 64px var(--pad-x) 36px; }
+  .footer-top { display: grid; gap: 40px; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .footer-top { grid-template-columns: 1.2fr 1fr 1fr; } }
+  .footer-brand p { color: #8E939B; max-width: 38ch; font-size: 15px; margin: 18px 0 0; }
+  .footer-col h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #8E939B; margin: 0 0 16px; font-weight: 500; }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .footer-col a { color: #D7DBE1; font-size: 15px; transition: color .15s; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; font-size: 13px; color: #74797F; }
+  .footer-bottom p { margin: 0; max-width: 60ch; }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="SegurosIA.html" aria-label="SegurosIA">
+      <img class="brand-logo" src="assets/logo-segurosia.png" alt="SegurosIA" width="800" height="800" />
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="SegurosIA.html#propuesta">Propuesta de valor</a>
+      <a href="SegurosIA.html#casos">Casos de uso</a>
+      <a href="SegurosIA.html#plataforma">Plataforma</a>
+      <a href="SegurosIA.html#cumplimiento">Cumplimiento</a>
+      <a href="SegurosIA.html#proceso">Proceso</a>
+      <a href="SegurosIA.html#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="https://cal.com/segurosia/30min" target="_blank" rel="noopener">Solicitar reunión</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="SegurosIA.html#propuesta">Propuesta de valor</a></li>
+      <li><a href="SegurosIA.html#casos">Casos de uso</a></li>
+      <li><a href="SegurosIA.html#plataforma">Plataforma</a></li>
+      <li><a href="SegurosIA.html#cumplimiento">Cumplimiento</a></li>
+      <li><a href="SegurosIA.html#proceso">Proceso</a></li>
+      <li><a href="SegurosIA.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="legal-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1 class="display h1">Política de privacidad</h1>
+      <p class="meta">Última actualización: abril de 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="wrap">
+      <div class="legal-grid">
+
+        <aside class="legal-toc">
+          <h4>Contenido</h4>
+          <ul>
+            <li><a href="#responsable">1. Responsable del tratamiento</a></li>
+            <li><a href="#datos">2. Datos recopilados</a></li>
+            <li><a href="#finalidades">3. Finalidades y base legal</a></li>
+            <li><a href="#destinatarios">4. Destinatarios</a></li>
+            <li><a href="#transferencias">5. Transferencias internacionales</a></li>
+            <li><a href="#conservacion">6. Conservación</a></li>
+            <li><a href="#derechos">7. Tus derechos</a></li>
+            <li><a href="#seguridad">8. Seguridad</a></li>
+            <li><a href="#modificaciones">9. Modificaciones</a></li>
+          </ul>
+        </aside>
+
+        <div class="prose">
+
+          <p style="font-size:15.5px; color: var(--muted); line-height:1.75; margin-bottom: 32px;">La confidencialidad y la seguridad son valores primordiales para SegurosIA. Asumimos el compromiso de garantizar la privacidad del Usuario en todo momento y de no recabar información innecesaria. Esta Política se establece de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+          <h2 id="responsable">1. Responsable del tratamiento</h2>
+          <p>Cuando el Usuario utilice el sitio web <strong>segurosia.com</strong> con fines de navegación, información o contacto general, el responsable del tratamiento es:</p>
+
+          <div class="identity-card">
+            <div class="identity-row">
+              <span class="identity-label">Denominación</span>
+              <span class="identity-value">Coberio, S.L.</span>
+            </div>
+            <div class="identity-row">
+              <span class="identity-label">NIF</span>
+              <span class="identity-value">B-10648384</span>
+            </div>
+            <div class="identity-row">
+              <span class="identity-label">Domicilio</span>
+              <span class="identity-value">Calle Alejandro Dumas 17, Oficinas, 29004 Málaga</span>
+            </div>
+            <div class="identity-row">
+              <span class="identity-label">Contacto DPD</span>
+              <span class="identity-value"><a href="mailto:dpd@segurosia.com">dpd@segurosia.com</a></span>
+            </div>
+          </div>
+
+          <h2 id="datos">2. Datos personales recopilados</h2>
+          <p>Según la interacción del Usuario con el Sitio Web, podemos recopilar:</p>
+          <ul>
+            <li><strong>Datos de contacto general:</strong> nombre, apellidos, compañía, clave DGSFP, teléfono y correo electrónico (a través de formularios de contacto).</li>
+            <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, idioma, páginas visitadas y tiempo de permanencia (a través de cookies y tecnologías similares, según la <a href="politica-de-cookies.html">Política de Cookies</a>).</li>
+          </ul>
+
+          <h2 id="finalidades">3. Finalidades del tratamiento y base legal</h2>
+
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Finalidad</th>
+                  <th>Base jurídica</th>
+                  <th>Responsable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Atender consultas y solicitudes de información</td>
+                  <td><span class="tag">Consentimiento · art. 6.1.a RGPD</span></td>
+                  <td>Coberio, S.L.</td>
+                </tr>
+                <tr>
+                  <td>Envío de comunicaciones comerciales y newsletter</td>
+                  <td><span class="tag">Consentimiento · art. 6.1.a RGPD + art. 21 LSSI</span></td>
+                  <td>Coberio, S.L.</td>
+                </tr>
+                <tr>
+                  <td>Mejora del sitio web y análisis estadístico</td>
+                  <td><span class="tag">Interés legítimo · art. 6.1.f RGPD</span></td>
+                  <td>Coberio, S.L.</td>
+                </tr>
+                <tr>
+                  <td>Grabación de conversaciones (calidad y prueba)</td>
+                  <td><span class="tag">Consentimiento · art. 6.1.a RGPD</span></td>
+                  <td>Coberio, S.L.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="destinatarios">4. Destinatarios de los datos</h2>
+          <p>Los datos personales podrán ser comunicados a:</p>
+          <ul>
+            <li><strong>Proveedores tecnológicos</strong> (alojamiento, CRM, herramientas de IA), que actúan como encargados del tratamiento bajo contrato conforme al artículo 28 del RGPD.</li>
+            <li><strong>Autoridades públicas</strong> (DGSFP, AEAT, juzgados, Sepblac) cuando exista obligación legal.</li>
+            <li><strong>Servicio de Atención al Cliente externo</strong> para la gestión de quejas y reclamaciones.</li>
+          </ul>
+          <p>No se venderán ni cederán datos personales a terceros para fines comerciales ajenos a la prestación del servicio.</p>
+
+          <h2 id="transferencias">5. Transferencias internacionales</h2>
+          <p>Algunos proveedores tecnológicos pueden tener servidores fuera del Espacio Económico Europeo (EEE). En tal caso, las transferencias se realizarán sobre la base de:</p>
+          <ul>
+            <li>Cláusulas Contractuales Tipo aprobadas por la Comisión Europea (Decisión 2021/914).</li>
+            <li>Decisiones de adecuación de la Comisión Europea, en su caso.</li>
+            <li>Evaluación previa del impacto de la transferencia (TIA) y medidas complementarias.</li>
+          </ul>
+          <p>Para más información, contacte con <a href="mailto:dpo@segurosia.com">dpo@segurosia.com</a>.</p>
+
+          <h2 id="conservacion">6. Conservación de los datos</h2>
+
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tipo de dato</th>
+                  <th>Plazo de conservación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Datos de contacto general</strong></td>
+                  <td>Mientras dure la relación comercial o hasta la retirada del consentimiento</td>
+                </tr>
+                <tr>
+                  <td><strong>Datos de navegación y cookies</strong></td>
+                  <td>Según lo indicado en la <a href="politica-de-cookies.html">Política de Cookies</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Conversaciones con agentes IA</strong></td>
+                  <td>2 años desde la última interacción, salvo relación contractual vigente</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="derechos">7. Derechos del Usuario</h2>
+          <p>Conforme al RGPD, el Usuario puede ejercer los siguientes derechos:</p>
+
+          <ul class="rights-list">
+            <li><span><strong>Acceso</strong> a sus datos personales.</span></li>
+            <li><span><strong>Rectificación</strong> de datos inexactos o incompletos.</span></li>
+            <li><span><strong>Supresión</strong> («derecho al olvido») cuando los datos ya no sean necesarios.</span></li>
+            <li><span><strong>Limitación</strong> del tratamiento en determinadas circunstancias.</span></li>
+            <li><span><strong>Oposición</strong> al tratamiento por motivos relacionados con su situación particular.</span></li>
+            <li><span><strong>Portabilidad</strong> de los datos en formato estructurado y de uso común.</span></li>
+            <li><span><strong>No ser objeto de decisiones automatizadas</strong> con efectos jurídicos vinculantes.</span></li>
+            <li><span><strong>Retirada del consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</span></li>
+          </ul>
+
+          <div class="rights-box">
+            <p>Para ejercer estos derechos, envíe un escrito a <a href="mailto:dpo@segurosia.com">dpo@segurosia.com</a> indicando la referencia «Protección de Datos» y el derecho que desea ejercer, junto con copia de su documento de identidad. Recibirá respuesta en el plazo máximo de un mes.</p>
+          </div>
+
+          <p>Si considera que sus derechos no han sido debidamente atendidos, puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+          <h2 id="seguridad">8. Seguridad</h2>
+          <p>Hemos implementado medidas técnicas y organizativas adecuadas para garantizar la confidencialidad, integridad, disponibilidad y resiliencia de los sistemas de tratamiento:</p>
+
+          <div class="security-grid">
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.5-3.4 7.5-8 8-4.6-.5-8-3.5-8-8V7l8-4z"/></svg>
+              Cifrado SSL/TLS de todas las comunicaciones
+            </div>
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg>
+              Cifrado en reposo de datos sensibles
+            </div>
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              Control de acceso basado en roles
+            </div>
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Auditorías periódicas de seguridad
+            </div>
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M4 8h16M4 16h16"/></svg>
+              Procedimientos de respuesta ante incidentes
+            </div>
+            <div class="security-item">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Formación del personal en protección de datos
+            </div>
+          </div>
+
+          <h2 id="modificaciones">9. Modificaciones</h2>
+          <p>Cualquier modificación de esta Política será publicada en el Sitio Web. Se recomienda al Usuario revisarla periódicamente.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="SegurosIA.html">
+          <img src="assets/logo-segurosia.png" alt="SegurosIA" width="800" height="800" style="height: 72px; filter: invert(1);" />
+        </a>
+        <p>Agentes de IA para procesos aseguradores. Soluciones para entidades aseguradoras, corredurías y organizaciones del ecosistema asegurador.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="SegurosIA.html#propuesta">Propuesta de valor</a></li>
+          <li><a href="SegurosIA.html#casos">Casos de uso</a></li>
+          <li><a href="SegurosIA.html#plataforma">Plataforma</a></li>
+          <li><a href="SegurosIA.html#cumplimiento">Cumplimiento</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="SegurosIA.html#proceso">Proceso</a></li>
+          <li><a href="SegurosIA.html#contacto">Contacto</a></li>
+          <li><a href="politica-de-privacidad.html" style="color:#fff;">Política de privacidad</a></li>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-de-cookies.html">Política de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SegurosIA · Coberio, S.L. · NIF B-10648384 · Málaga, España</p>
+      <p>Hecho en Málaga, España</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>

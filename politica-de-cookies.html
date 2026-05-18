@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Política de Cookies — SegurosIA</title>
+<meta name="description" content="Política de cookies de SegurosIA. Qué cookies usamos, para qué y cómo gestionarlas." />
+<meta name="robots" content="noindex, follow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #FAFAF7; --bg-2: #F4F2EC; --surface: #FFFFFF;
+    --ink: #0E1014; --ink-2: #2A2F38; --muted: #5E6470; --muted-2: #9098A2;
+    --line: #E5E2DA; --line-2: #EFEDE6;
+    --accent: #1E3A5F; --accent-ink: #14283F; --accent-soft: #EAF0F7; --accent-line: #D2DEEC;
+    --radius-sm: 8px; --radius: 14px; --radius-lg: 22px;
+    --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --container: 1240px; --pad-x: clamp(20px, 4vw, 56px);
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html,body { margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--font-sans); font-size: 17px; line-height: 1.55; color: var(--ink-2); background: var(--bg); -webkit-font-smoothing: antialiased; }
+  @media (min-width: 800px) { body { font-size: 18px; } }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+  ::selection { background: var(--accent); color: #fff; }
+
+  .display { font-family: var(--font-sans); color: var(--ink); font-weight: 600; letter-spacing: -0.025em; line-height: 1.05; }
+  .h1 { font-size: clamp(32px, 4.5vw, 54px); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); }
+  .eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--accent); }
+  .wrap { max-width: var(--container); margin: 0 auto; padding-left: var(--pad-x); padding-right: var(--pad-x); }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--bg) 86%, transparent); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+  .nav.scrolled { border-color: var(--line); }
+  .nav-inner { max-width: var(--container); margin: 0 auto; padding: 10px var(--pad-x); display: flex; align-items: center; gap: 28px; }
+  .brand { display: inline-flex; align-items: center; color: var(--ink); }
+  .brand-logo { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .brand-logo { height: 48px; } }
+  .nav-links { display: none; gap: 26px; margin-left: auto; }
+  @media (min-width: 980px) { .nav-links { display: flex; } }
+  .nav-links a { font-size: 15px; color: var(--ink-2); padding: 6px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .nav-links a:hover { color: var(--ink); border-color: var(--accent); }
+  .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  @media (min-width: 980px) { .nav-cta { margin-left: 0; } }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 10px; font-size: 15px; font-weight: 500; border: 1px solid transparent; transition: background .15s, color .15s, border-color .15s; white-space: nowrap; }
+  .btn-primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+  .btn-sm { padding: 9px 14px; font-size: 14px; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  @media (min-width: 980px) { .nav-toggle { display: none; } }
+  .mobile-menu { display: none; border-top: 1px solid var(--line); background: var(--bg); }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 12px var(--pad-x) 20px; display: grid; gap: 4px; }
+  .mobile-menu a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line-2); font-size: 17px; color: var(--ink); }
+
+  /* HERO */
+  .legal-hero { padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 56px); border-bottom: 1px solid var(--line); }
+  .legal-hero .eyebrow { margin-bottom: 20px; }
+  .legal-hero h1 { margin: 0 0 14px; }
+  .legal-hero .meta { color: var(--muted); font-size: 14.5px; margin: 0; }
+
+  /* LAYOUT */
+  .legal-body { padding: clamp(48px, 6vw, 80px) 0 clamp(72px, 10vw, 120px); }
+  .legal-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+  @media (min-width: 1040px) { .legal-grid { grid-template-columns: 220px 1fr; gap: 80px; align-items: start; } }
+
+  /* SIDEBAR */
+  .legal-toc { position: sticky; top: 88px; }
+  .legal-toc h4 { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-2); font-weight: 500; margin: 0 0 12px; }
+  .legal-toc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+  .legal-toc a { display: block; font-size: 13.5px; color: var(--muted); padding: 7px 10px; border-left: 2px solid var(--line); transition: color .15s, border-color .15s; line-height: 1.4; }
+  .legal-toc a:hover { color: var(--ink); border-color: var(--accent); }
+
+  /* PROSE */
+  .prose { max-width: 74ch; }
+  .prose h2 { font-size: clamp(19px, 2vw, 22px); font-weight: 600; color: var(--ink); letter-spacing: -0.015em; margin: 0 0 12px; padding-top: 48px; border-top: 1px solid var(--line); }
+  .prose h2:first-child { padding-top: 0; border-top: none; margin-top: 0; }
+  .prose h3 { font-size: 16px; font-weight: 600; color: var(--ink-2); margin: 24px 0 10px; letter-spacing: -0.01em; }
+  .prose p { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; line-height: 1.75; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose ul, .prose ol { margin: 0 0 14px; padding-left: 22px; color: var(--muted); font-size: 15.5px; line-height: 1.75; }
+  .prose li { margin-bottom: 6px; }
+  .prose a { color: var(--accent-ink); border-bottom: 1px solid var(--accent-line); transition: color .15s; }
+  .prose a:hover { color: var(--ink); }
+  .prose strong { color: var(--ink-2); font-weight: 600; }
+
+  /* COOKIE TYPE CARDS */
+  .cookie-types { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 14px 0 24px; }
+  @media (min-width: 640px) { .cookie-types { grid-template-columns: repeat(2, 1fr); } }
+  .cookie-type { background: var(--surface); padding: 18px 20px; }
+  .cookie-type-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px; }
+  .cookie-type h4 { font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+  .cookie-type p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.55; }
+
+  /* DATA TABLE */
+  .data-table-wrap { overflow-x: auto; margin: 14px 0 24px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .data-table thead tr { background: var(--bg-2); }
+  .data-table th { text-align: left; padding: 10px 14px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .data-table td { padding: 11px 14px; color: var(--muted); border-bottom: 1px solid var(--line-2); vertical-align: top; line-height: 1.5; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td strong { color: var(--ink-2); font-weight: 500; }
+  .data-table code { font-family: 'Geist Mono', 'Courier New', monospace; font-size: 12.5px; background: var(--bg-2); padding: 2px 6px; border-radius: 4px; color: var(--ink-2); }
+  .badge-required { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 500; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+  .badge-required.exempt { background: var(--bg-2); color: var(--muted); border: 1px solid var(--line); }
+  .badge-required.consent { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+
+  /* BROWSER GRID */
+  .browser-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); margin: 14px 0; }
+  @media (min-width: 640px) { .browser-grid { grid-template-columns: repeat(4, 1fr); } }
+  .browser-link { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 14px; color: var(--ink-2); font-weight: 500; transition: border-color .15s, color .15s; display: flex; align-items: center; gap: 8px; }
+  .browser-link:hover { border-color: var(--accent); color: var(--accent-ink); }
+  .browser-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; flex-shrink: 0; }
+
+  /* NOTE BOX */
+  .note-box { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 18px; margin: 14px 0; }
+  .note-box p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6; }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: #B7BCC4; }
+  .footer-inner { max-width: var(--container); margin: 0 auto; padding: 64px var(--pad-x) 36px; }
+  .footer-top { display: grid; gap: 40px; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .footer-top { grid-template-columns: 1.2fr 1fr 1fr; } }
+  .footer-brand p { color: #8E939B; max-width: 38ch; font-size: 15px; margin: 18px 0 0; }
+  .footer-col h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #8E939B; margin: 0 0 16px; font-weight: 500; }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .footer-col a { color: #D7DBE1; font-size: 15px; transition: color .15s; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; font-size: 13px; color: #74797F; }
+  .footer-bottom p { margin: 0; max-width: 60ch; }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="SegurosIA.html" aria-label="SegurosIA">
+      <img class="brand-logo" src="assets/logo-segurosia.png" alt="SegurosIA" width="800" height="800" />
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="SegurosIA.html#propuesta">Propuesta de valor</a>
+      <a href="SegurosIA.html#casos">Casos de uso</a>
+      <a href="SegurosIA.html#plataforma">Plataforma</a>
+      <a href="SegurosIA.html#cumplimiento">Cumplimiento</a>
+      <a href="SegurosIA.html#proceso">Proceso</a>
+      <a href="SegurosIA.html#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="https://cal.com/segurosia/30min" target="_blank" rel="noopener">Solicitar reunión</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="SegurosIA.html#propuesta">Propuesta de valor</a></li>
+      <li><a href="SegurosIA.html#casos">Casos de uso</a></li>
+      <li><a href="SegurosIA.html#plataforma">Plataforma</a></li>
+      <li><a href="SegurosIA.html#cumplimiento">Cumplimiento</a></li>
+      <li><a href="SegurosIA.html#proceso">Proceso</a></li>
+      <li><a href="SegurosIA.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="legal-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1 class="display h1">Política de cookies</h1>
+      <p class="meta">Última actualización: abril de 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="wrap">
+      <div class="legal-grid">
+
+        <aside class="legal-toc">
+          <h4>Contenido</h4>
+          <ul>
+            <li><a href="#que-son">1. Qué son las cookies</a></li>
+            <li><a href="#tipos">2. Tipos de cookies</a></li>
+            <li><a href="#tabla">3. Cookies en segurosia.com</a></li>
+            <li><a href="#gestion">4. Gestión de cookies</a></li>
+            <li><a href="#mas-info">5. Más información</a></li>
+          </ul>
+        </aside>
+
+        <div class="prose">
+
+          <h2 id="que-son">1. Qué son las cookies</h2>
+          <p>Una cookie es un fichero que se descarga en el dispositivo del Usuario al acceder a determinadas páginas web. Las cookies permiten a un sitio web almacenar y recuperar información sobre los hábitos de navegación del Usuario.</p>
+          <p>El uso de cookies se rige por el <strong>artículo 22.2 de la Ley 34/2002 (LSSI-CE)</strong> y las Directrices de la Agencia Española de Protección de Datos sobre el uso de cookies.</p>
+
+          <h2 id="tipos">2. Tipos de cookies</h2>
+
+          <div class="cookie-types">
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por gestión</div>
+              <h4>Cookies propias</h4>
+              <p>Gestionadas directamente por segurosia.com.</p>
+            </div>
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por gestión</div>
+              <h4>Cookies de terceros</h4>
+              <p>Gestionadas por entidades externas a SegurosIA (ej. Google, Meta).</p>
+            </div>
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por finalidad</div>
+              <h4>Técnicas / funcionales</h4>
+              <p>Necesarias para el funcionamiento del sitio (sesión, preferencias, seguridad). Exentas de consentimiento.</p>
+            </div>
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por finalidad</div>
+              <h4>Analíticas</h4>
+              <p>Permiten medir y analizar la navegación para mejorar el servicio. Requieren consentimiento.</p>
+            </div>
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por finalidad</div>
+              <h4>Publicitarias</h4>
+              <p>Almacenan el comportamiento del Usuario para mostrar publicidad personalizada. Requieren consentimiento.</p>
+            </div>
+            <div class="cookie-type">
+              <div class="cookie-type-label">Por duración</div>
+              <h4>De sesión / Persistentes</h4>
+              <p>De sesión: se eliminan al cerrar el navegador. Persistentes: permanecen durante un periodo definido.</p>
+            </div>
+          </div>
+
+          <h2 id="tabla">3. Cookies utilizadas en segurosia.com</h2>
+
+          <h3>Cookies técnicas <span style="font-weight:400; color: var(--muted);">— exentas de consentimiento</span></h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Proveedor</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Sesión Alpine.js</code></td>
+                  <td>segurosia.com</td>
+                  <td>Estado de componentes interactivos (menú, FAQ)</td>
+                  <td><span class="badge-required exempt">Sesión</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Cookies analíticas <span style="font-weight:400; color: var(--muted);">— requieren consentimiento</span></h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Proveedor</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>_ga</code>, <code>_ga_*</code></td>
+                  <td>Google Analytics</td>
+                  <td>Medición de tráfico y comportamiento</td>
+                  <td><span class="badge-required consent">2 años</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Cookies publicitarias <span style="font-weight:400; color: var(--muted);">— requieren consentimiento</span></h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Proveedor</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>_fbp</code></td>
+                  <td>Meta (Facebook)</td>
+                  <td>Seguimiento de conversiones y publicidad</td>
+                  <td><span class="badge-required consent">3 meses</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Servicios de terceros que pueden establecer cookies</h3>
+          <ul>
+            <li><strong>Google Fonts</strong> (fonts.googleapis.com): cookies técnicas para servir las fuentes tipográficas.</li>
+            <li><strong>Cal.com</strong> (cal.com): cookies propias del servicio de reservas al acceder al enlace externo.</li>
+            <li><strong>Tally.so</strong>: cookies de funcionamiento del formulario de contacto embebido.</li>
+          </ul>
+
+          <div class="note-box">
+            <p><strong>Nota:</strong> esta tabla se actualiza cada vez que se incorporan nuevas herramientas o servicios al sitio web.</p>
+          </div>
+
+          <h2 id="gestion">4. Gestión de cookies</h2>
+          <p>Al acceder al Sitio Web por primera vez, se mostrará un banner informativo que permite al Usuario:</p>
+          <ul>
+            <li>Aceptar todas las cookies.</li>
+            <li>Rechazar las cookies no esenciales.</li>
+            <li>Configurar sus preferencias por categoría.</li>
+          </ul>
+          <p>El Usuario puede revocar su consentimiento en cualquier momento, o eliminar las cookies directamente desde la configuración de su navegador:</p>
+
+          <div class="browser-grid">
+            <a class="browser-link" href="https://support.mozilla.org" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              Firefox
+            </a>
+            <a class="browser-link" href="https://support.google.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              Chrome
+            </a>
+            <a class="browser-link" href="https://support.apple.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              Safari
+            </a>
+            <a class="browser-link" href="https://support.microsoft.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              Edge
+            </a>
+          </div>
+
+          <p>Si el Usuario bloquea o elimina las cookies, algunas funcionalidades del Sitio Web podrán verse limitadas.</p>
+
+          <h2 id="mas-info">5. Más información</h2>
+          <p>Para cualquier consulta sobre esta Política de Cookies, contacte con <a href="mailto:dpo@segurosia.com">dpo@segurosia.com</a>.</p>
+          <p>Para información completa sobre el tratamiento de datos personales, consulte nuestra <a href="politica-de-privacidad.html">Política de Privacidad</a>.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="SegurosIA.html">
+          <img src="assets/logo-segurosia.png" alt="SegurosIA" width="800" height="800" style="height: 72px; filter: invert(1);" />
+        </a>
+        <p>Agentes de IA para procesos aseguradores. Soluciones para entidades aseguradoras, corredurías y organizaciones del ecosistema asegurador.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="SegurosIA.html#propuesta">Propuesta de valor</a></li>
+          <li><a href="SegurosIA.html#casos">Casos de uso</a></li>
+          <li><a href="SegurosIA.html#plataforma">Plataforma</a></li>
+          <li><a href="SegurosIA.html#cumplimiento">Cumplimiento</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="SegurosIA.html#proceso">Proceso</a></li>
+          <li><a href="SegurosIA.html#contacto">Contacto</a></li>
+          <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-de-cookies.html" style="color:#fff;">Política de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SegurosIA · Coberio, S.L. · NIF B-10648384 · Málaga, España</p>
+      <p>Hecho en Málaga, España</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
